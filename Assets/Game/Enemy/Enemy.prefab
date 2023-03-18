@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5767023251023152565}
   - component: {fileID: 406028261061986777}
   - component: {fileID: -723724647550621543}
+  - component: {fileID: 1877596708684438667}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -126,6 +127,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac70dc84baeb424495a9fdc5b168760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PatrolPoints: []
+  moveTimer: 3
+  <PlayerDetected>k__BackingField: 0
+  detectionTag: Player
+  OnTriggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTriggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &406028261061986777
 Rigidbody2D:
   serializedVersion: 4
@@ -164,5 +175,36 @@ TargetJoint2D:
   m_Target: {x: 0.1889095, y: -1.1281626}
   m_AutoConfigureTarget: 1
   m_MaxForce: 10000
-  m_DampingRatio: 0.5
-  m_Frequency: 5
+  m_DampingRatio: 0.3
+  m_Frequency: 1
+--- !u!114 &1877596708684438667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969751404875388054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af83801a623a5043bc692c445890f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Player
+  OnTriggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnTriggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
