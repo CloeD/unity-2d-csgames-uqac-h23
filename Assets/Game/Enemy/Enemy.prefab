@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5120717874974131606}
   - component: {fileID: 8163293137680357386}
   - component: {fileID: 5767023251023152565}
+  - component: {fileID: 406028261061986777}
+  - component: {fileID: -723724647550621543}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -124,3 +126,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac70dc84baeb424495a9fdc5b168760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &406028261061986777
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969751404875388054}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!257 &-723724647550621543
+TargetJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969751404875388054}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_Anchor: {x: 0, y: 0}
+  m_Target: {x: 0.1889095, y: -1.1281626}
+  m_AutoConfigureTarget: 1
+  m_MaxForce: 10000
+  m_DampingRatio: 0.5
+  m_Frequency: 5
